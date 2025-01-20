@@ -24,3 +24,11 @@ Don't edit the file directly! chezmoi will not track those changes.
 
 ### Work in the editor of choice
 Set `export EDITOR='nvim'` in `.zshrc`
+
+## Diff tool for `chezmoi diff`
+```toml
+~/.config/chezmoi/chezmoi.toml
+[diff]
+    command = "delta"
+    pager = "delta"
+``` 
