@@ -135,7 +135,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Homebrew aliases
-alias brewuup="brew update && brew upgrade --cask --greedy"
+alias brewup="brew update && brew upgrade --cask --greedy"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsheval "$(direnv hook zsh)"
