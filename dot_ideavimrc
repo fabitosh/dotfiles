@@ -18,7 +18,7 @@ set surround  " Replace or delete surroundings such as {}, '' etc, with 'cs{]' a
 set cursorline  " Highlight the current line
 set clipboard=unnamed  " Use the system clipboard
 set relativenumber  " Show line numbers relative to the current line
-set which-key  " Show key mappings after leader key usage
+set which-key  " Show available key mappings after leader key usage
 
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
