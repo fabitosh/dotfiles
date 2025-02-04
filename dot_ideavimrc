@@ -19,6 +19,7 @@ set cursorline  " Highlight the current line
 set clipboard=unnamed  " Use the system clipboard
 set relativenumber  " Show line numbers relative to the current line
 set which-key  " Show available key mappings after leader key usage
+set timeoutlen=8000  " time in ms until the which-key pop disappears
 
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
