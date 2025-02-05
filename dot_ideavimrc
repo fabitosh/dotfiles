@@ -29,6 +29,25 @@ Plug 'easymotion/vim-easymotion'
 
 " Remapping
 map Q gq  " Reformat the current line or selection
+inoremap jj <Esc>  " easy excaping from insert mode
+
+" Navigate between Vim splits using Ctrl + hjkl (like tmux)
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Open file under cursor in a new split (very useful!)
+nnoremap gf <C-w>gf
+
+" Rename (Shift+F6 equivalent)
+nnoremap <leader>rn :action RenameElement<CR>
+
+" Reformat Code (Ctrl+Alt+L / Cmd+Option+L)
+nnoremap <leader>fmt :action ReformatCode<CR>
+
+" Open the terminal
+nnoremap <leader>t :action Terminal<CR>
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
