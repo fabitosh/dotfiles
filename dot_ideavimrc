@@ -28,8 +28,11 @@ Plug 'tpope/vim-commentary'  " gc to comment/uncomment lines, gcap to comment/un
 Plug 'easymotion/vim-easymotion'
 
 " Remapping
-map Q gq  " Reformat the current line or selection
-inoremap jj <Esc>  " easy excaping from insert mode
+"
+" Reformat the current line or selection
+map Q gq
+" easy excaping from insert mode
+inoremap jj <Esc>
 
 " Navigate between Vim splits using Ctrl + hjkl (like tmux)
 nnoremap <C-h> <C-w>h
