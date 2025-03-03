@@ -34,6 +34,9 @@ map Q gq
 " easy excaping from insert mode
 inoremap jj <Esc>
 
+"Search and replace currently selected text
+vnoremap <leader>s y:%s/<C-r>"
+
 " Navigate between Vim splits using Ctrl + hjkl (like tmux)
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
