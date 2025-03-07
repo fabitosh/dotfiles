@@ -23,6 +23,9 @@ Don't edit the file directly! chezmoi will not track those changes.
 1. `chezmoi edit .crazyconfig`
 2. `chezmoi apply`
 
+### Badboi edited the file directly. Might cause conflicts.
+1. `chezmoi apply .crazyconfig`
+
 ### Work in the editor of choice
 Set `export EDITOR='nvim'` in `.zshrc`
 
@@ -37,4 +40,4 @@ Set `export EDITOR='nvim'` in `.zshrc`
 ## Setup
 - Mac: Homebrew
 - Work Windows: In Powershell (not WSL): Scoop
-- WSL: not setup yet
+- WSL: not fully migrated yet. 
