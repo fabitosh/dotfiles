@@ -14,7 +14,6 @@ set incsearch  " Highlights search results as you type
 set hlsearch  " Highlights all search results
 set ignorecase  " case-insensitive search
 set smartcase  " overrides ignorecase if search contains uppercase
-set surround  " Replace or delete surroundings such as {}, '' etc, with 'cs{]' and 'ds{'
 set cursorline  " Highlight the current line
 set clipboard=unnamed  " Use the system clipboard
 set relativenumber  " Show line numbers relative to the current line
@@ -23,19 +22,33 @@ set timeoutlen=8000  " time in ms until the which-key pop-up disappears
 
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-Plug 'machakann/vim-highlightedyank'  " Highlight copied text
+Plug 'easymotion/vim-easymotion'  " Install 2 Plugins (follow IdeaVim Plugins link above)
+" require no further Plugin installs
+Plug 'preservim/nerdtree'  " Open file explorer with :NERDTreeToggle
+Plug 'tpope/vim-surround'  " Change surroundings with cs{] and ds{]
 Plug 'tpope/vim-commentary'  " gc to comment/uncomment lines, gcap to comment/uncomment paragraphs
-Plug 'easymotion/vim-easymotion'
+Plug 'machakann/vim-highlightedyank'  " Highlight copied text
 
 " Remapping
-"
 " Reformat the current line or selection
 map Q gq
 " easy excaping from insert mode
 inoremap jj <Esc>
 
 "Search and replace currently selected text
-vnoremap <leader>s y:%s/<C-r>"
+vnoremap <leader>s y:%s/<C-r>"/
+
+" Navigate in time
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+
+" PyCharm Actions
+" Open Files with NERDTree
+" o: open files and directories
+" t open in new tab
+" i open in split
+" gi same as i, but keep focus on NERDTree
+map <leader>o :NERDTreeToggle<CR>
 
 " Navigate between Vim splits using Ctrl + hjkl (like tmux)
 nnoremap <C-h> <C-w>h
@@ -43,24 +56,65 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Window splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>wh <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" Close active tab
+map <leader>q <action>(CloseContent)
+" Tab Navigation
+nmap <c-left> <Action>(PreviousTab)
+nmap <c-right> <Action>(NextTab)
+
+" Project Navigation
+map <leader>wq <Action>(NextProjectWindow)
+
+" Display options
+map <leader>vd <Action>(ToggleDistractionFreeMode)
+map <leader>vz <Action>(ToggleZenMode)
+map <leader>vf <Action>(ToggleFullScreen)
+
+" Git
+map <leader>gg <Action>(Vcs.QuickListPopupAction)
+
 " Open file under cursor in a new split (very useful!)
 nnoremap gf <C-w>gf
 
+" Navigation in single file
+map [ <Action>(MethodUp)
+map ] <Action>(MethodDown)
+
 " Rename (Shift+F6 equivalent)
-nnoremap <leader>rn :action RenameElement<CR>
+map <leader>rn <Action>(RenameElement)
+
+" Run
+map <leader>rr <Action>(Run)
+
+" Debugging
+map <leader>bb <Action>(ToggleLineBreakpoint)
+"" Start debug session
+map <leader>d <Action>(Debug)
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
 
 " Reformat Code (Ctrl+Alt+L / Cmd+Option+L)
-nnoremap <leader>fmt :action ReformatCode<CR>
+map <leader>fmt <Action>(ReformatCode)
 
 " Open the terminal
-nnoremap <leader>t :action Terminal<CR>
+map <leader>t <Action>(ActivateTerminalToolWindow)
+map <leader>c <Action>(CloseContent)  # Close current tab/terminal
+" map <leader>l <Action>(JumpToLastWindow)  # Jump from Terminal back to editor
+
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
 
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
+
