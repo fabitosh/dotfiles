@@ -94,6 +94,12 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Resize splits using Ctrl+Alt+hjkl
+map <C-A-h> <Action>(StretchSplitToLeft)
+map <C-A-l> <Action>(StretchSplitToRight)
+map <C-A-k> <Action>(StretchSplitToTop)
+map <C-A-j> <Action>(StretchSplitToBottom)
+
 " --- Tab / Buffer Management ---
 map <leader>bc <Action>(CloseContent)
 map <leader>bq <Action>(CloseContent)
@@ -170,4 +176,6 @@ map <leader>vf <Action>(ToggleFullScreen)
 " -----------------------------------------------------------------------------
 " Ensure commentary plugin works via standard 'gc' mapping (usually automatic)
 " Ensure surround plugin works via standard 'cs', 'ds', 'ys' (usually automatic)
+
+" --- End of .ideavimrc ---
 
