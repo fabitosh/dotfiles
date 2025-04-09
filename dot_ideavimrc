@@ -1,120 +1,173 @@
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
+" .ideavimrc - Configuration for IdeaVim plugin in JetBrains IDEs
+" Inspired by LazyVim/Neovim keymap organization
+
+" -----------------------------------------------------------------------------
+" Options
+" -----------------------------------------------------------------------------
+set number                     " Show line numbers
+set relativenumber             " Show relative line numbers
+set cursorline                 " Highlight the current line
+set scrolloff=8                " Keep 8 lines visible above/below cursor when scrolling
+set showcmd                    " Show command in the last line of the screen
+set incsearch                  " Highlight search results incrementally
+set hlsearch                   " Highlight all search results
+set ignorecase                 " Case-insensitive search
+set smartcase                  " Override ignorecase if search pattern contains uppercase letters
+set clipboard=unnamed          " Use system clipboard for copy/paste
+set timeoutlen=1000            " Time in ms to wait for mapped sequence
+set easymotion                 " Enable EasyMotion plugin integration (Requires JetBrains EasyMotion plugin)
+
+" -----------------------------------------------------------------------------
+" Leader Key
+" -----------------------------------------------------------------------------
 let mapleader=" "
 nnoremap <SPACE> <Nop>
 
-" install plugin https://plugins.jetbrains.com/plugin/13360-ideavim-easymotion/
-" install plugin https://plugins.jetbrains.com/plugin/15976-which-key
-set easymotion  " leader-leader-f/b/w/n-<letterofchoice> to move to an instance of that letter
-set showcmd
-set scrolloff=8  " Show 8 lines of context when scrolling
-set incsearch  " Highlights search results as you type
-set hlsearch  " Highlights all search results
-set ignorecase  " case-insensitive search
-set smartcase  " overrides ignorecase if search contains uppercase
-set cursorline  " Highlight the current line
-set clipboard=unnamed  " Use the system clipboard
-set relativenumber  " Show line numbers relative to the current line
-set which-key  " Show available key mappings after leader key usage
-set timeoutlen=8000  " time in ms until the which-key pop-up disappears
+" -----------------------------------------------------------------------------
+" Plugins (Managed via IdeaVim's :Plug command or JetBrains Marketplace)
+" -----------------------------------------------------------------------------
+" Ensure these Vim plugins are available to IdeaVim (e.g., via ~/.vim/plugged or IDE settings)
+" Or install the corresponding JetBrains plugins if available (like EasyMotion, Which-Key)
 
+" Note: Actual installation often happens via IDE Plugin Marketplace for some features
+" Plug 'easymotion/vim-easymotion'        " Already enabled via `set easymotion` if JB plugin installed
+Plug 'preservim/nerdtree'               " File explorer (:NERDTreeToggle)
+Plug 'tpope/vim-surround'               " cs, ds, ys - change/delete/add surroundings
+Plug 'tpope/vim-commentary'             " gc - comment/uncomment lines
+Plug 'machakann/vim-highlightedyank'    " Highlight yanked text briefly
 
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-Plug 'easymotion/vim-easymotion'  " Install 2 Plugins (follow IdeaVim Plugins link above)
-" require no further Plugin installs
-Plug 'preservim/nerdtree'  " Open file explorer with :NERDTreeToggle
-Plug 'tpope/vim-surround'  " Change surroundings with cs{] and ds{]
-Plug 'tpope/vim-commentary'  " gc to comment/uncomment lines, gcap to comment/uncomment paragraphs
-Plug 'machakann/vim-highlightedyank'  " Highlight copied text
+" --- Configure Plugins ---
+" Highlight yanked text for 200ms
+let g:highlightedyank_highlight_duration = 200
 
-" Remapping
-" Reformat the current line or selection
-map Q gq
-" easy excaping from insert mode
+" -----------------------------------------------------------------------------
+" General Mappings
+" -----------------------------------------------------------------------------
+" Escape insert mode easily
 inoremap jj <Esc>
 
-"Search and replace currently selected text
-vnoremap <leader>s y:%s/<C-r>"/
 
-" Navigate in time
-map <C-o> <Action>(Back)
-map <C-i> <Action>(Forward)
-
-" PyCharm Actions
-" Open Files with NERDTree
-" o: open files and directories
-" t open in new tab
-" i open in split
-" gi same as i, but keep focus on NERDTree
-map <leader>o :NERDTreeToggle<CR>
-
-" Navigate between Vim splits using Ctrl + hjkl (like tmux)
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" Window splits
-map <leader>wv <Action>(SplitVertically)
-map <leader>wh <Action>(SplitHorizontally)
-map <leader>wu <Action>(Unsplit)
-map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
-
-" Close active tab
-map <leader>q <action>(CloseContent)
-" Tab Navigation
-nmap <c-left> <Action>(PreviousTab)
-nmap <c-right> <Action>(NextTab)
-
-" Project Navigation
-map <leader>wq <Action>(NextProjectWindow)
-
-" Display options
-map <leader>vd <Action>(ToggleDistractionFreeMode)
-map <leader>vz <Action>(ToggleZenMode)
-map <leader>vf <Action>(ToggleFullScreen)
-
-" Git
-map <leader>gg <Action>(Vcs.QuickListPopupAction)
-
-" Open file under cursor in a new split (very useful!)
-nnoremap gf <C-w>gf
-
-" Navigation in single file
-map [ <Action>(MethodUp)
-map ] <Action>(MethodDown)
-
-" Rename (Shift+F6 equivalent)
-map <leader>rn <Action>(RenameElement)
-
-" Run
-map <leader>rr <Action>(Run)
-
-" Debugging
-map <leader>bb <Action>(ToggleLineBreakpoint)
-"" Start debug session
-map <leader>d <Action>(Debug)
+map == <Action>(ReformatCode)
 
 " Easy visual indentation
 vnoremap < <gv
 vnoremap > >gv
 
-" Reformat Code (Ctrl+Alt+L / Cmd+Option+L)
-map <leader>fmt <Action>(ReformatCode)
+map U <Action>(Undo)
+map <C-r> <Action>(Redo)
 
-" Open the terminal
-map <leader>t <Action>(ActivateTerminalToolWindow)
-map <leader>c <Action>(CloseContent)  # Close current tab/terminal
-" map <leader>l <Action>(JumpToLastWindow)  # Jump from Terminal back to editor
+" Navigate back/forward in IDE navigation history
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
 
+" Search and replace currently selected text
+vnoremap <leader>s y:%s/<C-r>"/<C-r>"/g<Left><Left>
 
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
+" -----------------------------------------------------------------------------
+" Leader Mappings
+" -----------------------------------------------------------------------------
 
+" --- File / Explorer ---
+map <leader>e :NERDTreeToggle<CR>
+" o: open files and directories
+" t open in new tab
+" i open in split
+map <leader>ff <Action>(GotoFile)
+map <leader>fs <Action>(SaveAll)
 
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
+" --- Search ---
+map <leader>sa <Action>(FindInPath)
+map <leader>sp <Action>(FindInPath)
+map <leader>sw <Action>(FindUsages)
+
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wc <Action>(CloseEditor)
+map <leader>wo <Action>(Unsplit)
+map <leader>w] <Action>(MoveEditorToNextTabGroup)
+map <leader>w[ <Action>(MoveEditorToPreviousTabGroup)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" Navigate between Vim splits using Ctrl + hjkl (like tmux)
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" --- Tab / Buffer Management ---
+map <leader>bc <Action>(CloseContent)
+map <leader>bq <Action>(CloseContent)
+map <leader>bn <Action>(NextTab)
+map <leader>bp <Action>(PreviousTab)
+map <leader>b] <Action>(NextTab)
+map <leader>b[ <Action>(PreviousTab)
+map <leader>bl <Action>(Switcher)
+
+" Tab Navigation using Ctrl
+nmap <c-left> <Action>(PreviousTab)
+nmap <c-right> <Action>(NextTab)
+
+" --- Code Actions ---
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cf <Action>(ReformatCode)
+map <leader>cr <Action>(RenameElement)
+map <leader>cd <Action>(GotoDeclaration)
+map <leader>cD <Action>(GotoTypeDeclaration)
+map <leader>ci <Action>(GotoImplementation)
+map <leader>cu <Action>(FindUsages)
+map K <Action>(QuickJavaDoc)
+
+" Method Navigation
+map [ <Action>(MethodUp)
+map ] <Action>(MethodDown)
+
+" --- Git ---
+" Git actions popup
+map <leader>gg <Action>(Vcs.QuickListPopupAction)
+map <leader>gs <Action>(Vcs.ShowChanges)
+map <leader>gc <Action>(CheckinProject)
+map <leader>gp <Action>(Vcs.UpdateProject)
+map <leader>gP <Action>(Vcs.Push)
+
+" --- Run / Debug ---
+" Run
+map <leader>rr <Action>(Run)
+" Run Debug - Kept your original <leader>d
+map <leader>rd <Action>(Debug)
+map <leader>rb <Action>(ToggleLineBreakpoint)
+map <leader>rC <Action>(Resume)
+map <leader>ro <Action>(StepOver)
+map <leader>ri <Action>(StepInto)
+map <leader>rO <Action>(StepOut)
+
+" --- Terminal ---
+" Terminal Toggle - Kept your original <leader>t
+map <leader>tt <Action>(ActivateTerminalToolWindow)
+" Consider mapping terminal escape sequence if needed, e.g., tnoremap <Esc> <C-\><C-n>
+
+" --- Project ---
+map <leader>wq <Action>(NextProjectWindow)
+
+" --- View / Display Options ---
+map <leader>vd <Action>(ToggleDistractionFreeMode)
+map <leader>vz <Action>(ToggleZenMode)
+map <leader>vf <Action>(ToggleFullScreen)
+
+" --- Other IDE Actions ---
+" Add more <Action>(...) mappings as needed, organizing them under appropriate leader keys.
+" Find Action IDs: https://jb.gg/ideavim-action-ids or use `:actionlist` in IdeaVim
+
+" -----------------------------------------------------------------------------
+" Plugin Specific Mappings (Example: NERDTree)
+" -----------------------------------------------------------------------------
+" You can add NERDTree specific mappings here if desired
+" Example: Map 'o' in NERDTree window to open file and close NERDTree
+" autocmd FileType nerdtree nmap <buffer> o :NERDTreeToggle<CR>
+" autocmd FileType nerdtree nmap <buffer> <CR> :NERDTreeToggle<CR>
+
+" -----------------------------------------------------------------------------
+" Final Sanity Checks / Overrides
+" -----------------------------------------------------------------------------
+" Ensure commentary plugin works via standard 'gc' mapping (usually automatic)
+" Ensure surround plugin works via standard 'cs', 'ds', 'ys' (usually automatic)
 
