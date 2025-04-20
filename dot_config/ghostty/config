@@ -16,7 +16,10 @@ keybind = ctrl+a>k=new_split:up
 keybind = ctrl+a>l=new_split:right
 keybind = ctrl+a>f=toggle_split_zoom
 
-# keybind = ctrl+a>h=adjust-cell-width::-5
+keybind = ctrl+alt+left=resize_split:left,30
+keybind = ctrl+alt+right=resize_split:right,30
+keybind = ctrl+alt+up=resize_split:up,30
+keybind = ctrl+alt+down=resize_split:down,30
 
 keybind = ctrl+a>d=close_surface
 
