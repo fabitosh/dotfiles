@@ -132,6 +132,9 @@ use_dbx() {
   export DATABRICKS_CONFIG_PROFILE=$1
   echo "Databricks CLI profile set to: $DATABRICKS_CONFIG_PROFILE"
 }
+alias db="databricks"
+alias dbc="databricks clusters"
+alias dbcp="databricks clusters list --is-pinned"
 
 
 # --- zsh-vi-mode Configuration ---
