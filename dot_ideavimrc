@@ -151,7 +151,6 @@ map <leader>gP <Action>(Vcs.Push)
 " --- Run / Debug ---
 " Run
 map <leader>rr <Action>(Run)
-" Run Debug - Kept your original <leader>d
 map <leader>rd <Action>(Debug)
 map <leader>rb <Action>(ToggleLineBreakpoint)
 map <leader>rC <Action>(Resume)
