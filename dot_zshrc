@@ -123,8 +123,10 @@ alias ....="cd ../../.."
 # Homebrew aliases
 alias brewup="brew update && brew upgrade --cask --greedy"
 
-alias l="lsd -Al"
+# lsd - ls deluxe
 alias ls="lsd"
+alias l="lsd -l"
+alias la="lsd -Al"
 
 # terraform aliases
 alias tf="terraform"
