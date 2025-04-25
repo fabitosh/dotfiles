@@ -1,6 +1,6 @@
 shell-integration = zsh
 font-family = JetBrains Mono
-theme = dark:catppuccin-frappe,light:catppuccin-latte
+theme = dark:tokyonight,light:catppuccin-latte
 mouse-hide-while-typing = false
 
 keybind = ctrl+n=new_window
