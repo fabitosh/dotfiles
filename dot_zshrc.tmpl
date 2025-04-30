@@ -1,8 +1,6 @@
 {{- if eq .chezmoi.os "linux" -}}
 # Find programs installed by Linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# sudo apt install openjdk-11-jdk -y
-export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 {{- end -}}
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -52,6 +50,8 @@ alias ....="cd ../../.."
 alias brewup="brew update && brew upgrade && brew upgrade --cask"
 alias brewupg="brew update && brew upgrade && brew upgrade --cask --greedy"
 {{ else if eq .chezmoi.os "linux" }}
+# sudo apt install openjdk-11-jdk -y
+export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 alias brewup="brew update && brew upgrade"
 {{- end }}
 
