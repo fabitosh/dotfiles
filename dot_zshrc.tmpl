@@ -55,7 +55,7 @@ export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 alias brewup="brew update && brew upgrade"
 {{- end }}
 
-# --- yazi ---
+# --- yazi - terminal file manager ---
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
