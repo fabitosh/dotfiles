@@ -1,0 +1,5 @@
+[manager]
+sort_by = "natural"
+sort_translit = true # Umlaute
+linemode = "mtime"
+show_hidden = true
