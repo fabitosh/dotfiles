@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" }}
 [[manager.prepend_keymap]]
 # Overwrites "Follow hovered symlink"
 on = ["g", "f"]
@@ -8,3 +9,16 @@ desc = "Go to GDrive File Management"
 on = ["g", "r"]
 run = "cd ~/repos/github/fabitosh/"
 desc = "Go to cloned github repos"
+
+{{else if eq .chezmoi.os "linux" }}
+[[manager.prepend_keymap]]
+# Overwrites "Follow hovered symlink"
+on = ["g", "f"]
+run = "cd '/mnt/c/Users/fmeier/My Documents'"
+desc = "Go to Windows Documents"
+
+[[manager.append_keymap]]
+on = ["g", "r"]
+run = "cd ~/repos/"
+desc = "Go to cloned github repos"
+{{ end }}
