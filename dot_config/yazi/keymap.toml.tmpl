@@ -10,6 +10,11 @@ on = ["g", "r"]
 run = "cd ~/repos/github/fabitosh/"
 desc = "Go to cloned github repos"
 
+[[manager.prepend_keymap]]
+on = ["g", "o"]
+run = "cd '~/Google Drive/My Drive/obsiabio'"
+desc = "Go to obsidian vault"
+
 {{else if eq .chezmoi.os "linux" }}
 [[manager.prepend_keymap]]
 # Overwrites "Follow hovered symlink"
