@@ -40,11 +40,6 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# --- Navigation ---
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-
 # --- Homebrew ---
 {{- if eq .chezmoi.os "darwin" }}
 alias brewup="brew update && brew upgrade && brew upgrade --cask"
@@ -54,6 +49,16 @@ alias brewupg="brew update && brew upgrade && brew upgrade --cask --greedy"
 export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 alias brewup="brew update && brew upgrade"
 {{- end }}
+
+# --- Abbreviations ---
+alias 'vi' = 'nvim'
+alias 'lg' = 'lazygit'
+alias 'pyc' = 'pycharm'
+
+# --- Navigation ---
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # --- yazi - terminal file manager ---
 function y() {
