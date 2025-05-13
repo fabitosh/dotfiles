@@ -42,8 +42,8 @@ fi
 
 # --- Homebrew ---
 {{- if eq .chezmoi.os "darwin" }}
-alias brewup="brew update && brew upgrade && brew upgrade --cask"
-alias brewupg="brew update && brew upgrade && brew upgrade --cask --greedy"
+alias brewup="brew update -q && brew upgrade && brew upgrade --cask"
+alias brewupg="brew update -q && brew upgrade -q && brew upgrade --cask --greedy -q"
 {{ else if eq .chezmoi.os "linux" }}
 # sudo apt install openjdk-11-jdk -y
 export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
