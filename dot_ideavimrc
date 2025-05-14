@@ -47,6 +47,11 @@ map <leader>e :NERDTreeToggle<CR>
 " t open in new tab
 " i open in split
 
+" quickscope
+" Requires IdeaVim-Quickscope plugin install. Highlights unique characters for
+" f, F, t, T
+set quickscope
+
 
 Plug 'machakann/vim-highlightedyank'    " Highlight yanked text briefly
 let g:highlightedyank_highlight_duration = 200
