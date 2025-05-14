@@ -47,12 +47,6 @@ map <leader>e :NERDTreeToggle<CR>
 " t open in new tab
 " i open in split
 
-" quickscope
-" Requires IdeaVim-Quickscope plugin. Highlights unique characters for fFtT
-set quickscope
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-
-
 
 Plug 'machakann/vim-highlightedyank'    " Highlight yanked text briefly
 let g:highlightedyank_highlight_duration = 200
