@@ -56,9 +56,7 @@ let g:highlightedyank_highlight_duration = 200
 " -----------------------------------------------------------------------------
 " Escape insert mode easily
 inoremap jj <Esc>
-
-
-map == <Action>(ReformatCode)
+nmap <leader>cfg :edit ~/.ideavimrc<CR>
 
 " Easy visual indentation
 vnoremap < <gv
@@ -146,8 +144,9 @@ nmap <leader>xq <Action>(ActivateProblemsViewToolWindow)
 map <leader>gg <Action>(Vcs.QuickListPopupAction)
 map <leader>gs <Action>(Vcs.ShowChanges)
 map <leader>gc <Action>(CheckinProject)
-map <leader>gp <Action>(Vcs.UpdateProject)
-map <leader>gP <Action>(Vcs.Push)
+map <leader>gl <Action>(Vcs.UpdateProject)
+map <leader>gp <Action>(Vcs.Push)
+map <leader>gh <Action>(Vcs.ShowHistory)
 
 " --- Run / Debug ---
 " Run
