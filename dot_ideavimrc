@@ -146,7 +146,7 @@ map <leader>gs <Action>(Vcs.ShowChanges)
 map <leader>gc <Action>(CheckinProject)
 map <leader>gl <Action>(Vcs.UpdateProject)
 map <leader>gp <Action>(Vcs.Push)
-map <leader>gh <Action>(Vcs.ShowHistory)
+map <leader>gh <Action>(Vcs.Show.Log)
 
 " --- Run / Debug ---
 " Run
