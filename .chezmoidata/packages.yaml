@@ -19,6 +19,7 @@ packages:
       - pipx
       - pyenv
       - pyenv-virtualenv
+      - rga
       - ripgrep
       - the_silver_searcher
       - tlrc
@@ -84,6 +85,7 @@ packages:
       - pipx
       - pyenv
       - pyenv-virtualenv
+      - rga
       - ripgrep
       - the_silver_searcher
       - tlrc
