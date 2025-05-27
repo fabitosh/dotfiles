@@ -62,6 +62,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+# --- Chezmoi without spawning a new shell ---
+chezmoi-cd() {
+  cd $(chezmoi source-path)
+}
+
 # --- yazi - terminal file manager ---
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
