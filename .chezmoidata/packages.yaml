@@ -69,11 +69,9 @@ packages:
     brews:
       - bat
       - btop
-      - bitwarden-cli
       - chezmoi
       - direnv
       - fd
-      - ffmpeg
       - fzf
       - gh
       - git
