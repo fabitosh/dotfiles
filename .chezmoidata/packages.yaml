@@ -12,6 +12,7 @@ packages:
       - gh
       - git
       - git-delta
+      - fit-filter-repo
       - jq
       - lazygit
       - lsd
@@ -23,6 +24,7 @@ packages:
       - ripgrep
       - the_silver_searcher
       - tlrc
+      - xh
       - yazi
       - yt-dlp
       - zoxide
@@ -70,12 +72,14 @@ packages:
       - bat
       - btop
       - chezmoi
+      - databricks
       - direnv
       - fd
       - fzf
       - gh
       - git
       - git-delta
+      - git-filter-repo
       - jq
       - lazygit
       - lsd
@@ -87,6 +91,7 @@ packages:
       - ripgrep
       - the_silver_searcher
       - tlrc
+      - xh
       - yazi
       - zoxide
       - zsh-vi-mode
