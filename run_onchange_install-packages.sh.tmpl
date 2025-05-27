@@ -25,14 +25,12 @@ if ! command -v brew &>/dev/null; then
   echo "Error: Homebrew not found on Linux. Install Homebrew first." >&2
   exit 1
 fi
-{{ if .packages.linux.brews -}}
+
 echo "Passing linux brews:"
 brew bundle --file=/dev/stdin <<EOF
 {{- range .packages.linux.brews }}
 brew {{ . | quote }}
-{{-   end }}
+{{ end -}}
 EOF
 echo "Homebrew bundle for Linux complete."
-{{ else -}}
-echo "No Homebrew packages or casks defined for Linux brew. Skipping."
-{{ end -}}
+{{ end }}
