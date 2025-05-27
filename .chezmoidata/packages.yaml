@@ -24,6 +24,7 @@ packages:
       - ripgrep
       - the_silver_searcher
       - tlrc
+      - uv
       - xh
       - yazi
       - yt-dlp
@@ -91,6 +92,7 @@ packages:
       - ripgrep
       - the_silver_searcher
       - tlrc
+      - uv
       - xh
       - yazi
       - zoxide
