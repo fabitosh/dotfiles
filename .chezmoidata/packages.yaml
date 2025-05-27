@@ -88,6 +88,5 @@ packages:
       - the_silver_searcher
       - tlrc
       - yazi
-      - yt-dlp
       - zoxide
       - zsh-vi-mode
