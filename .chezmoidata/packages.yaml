@@ -12,6 +12,7 @@ packages:
       - gh
       - git
       - git-delta
+      - git-extras
       - git-filter-repo
       - jq
       - lazygit
@@ -80,6 +81,7 @@ packages:
       - gh
       - git
       - git-delta
+      - git-extras
       - git-filter-repo
       - jq
       - lazygit
