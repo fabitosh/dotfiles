@@ -6,6 +6,7 @@ packages:
       - bitwarden-cli
       - chezmoi
       - direnv
+      - dust
       - fd
       - ffmpeg
       - fzf
@@ -76,6 +77,7 @@ packages:
       - chezmoi
       - databricks
       - direnv
+      - dust
       - fd
       - fzf
       - gh
