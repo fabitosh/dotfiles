@@ -101,3 +101,11 @@ packages:
       - yazi
       - zoxide
       - zsh-vi-mode
+  windows:
+    scoop:
+      - 7zip
+      - chezmoi
+      - msklc
+      - neovim
+      - obsidian
+      - windirstat

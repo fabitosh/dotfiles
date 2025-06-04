@@ -1,0 +1,13 @@
+Write-Host "Installing Windows packages with Scoop..."
+
+if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
+  Write-Error "Error: Scoop not found on Windows. Install Scoop first."
+  exit 1
+}
+
+{{ range .packages.windows.scoop }}
+Write-Host "Installing {{ . }} with Scoop..."
+scoop install {{ . }}
+{{ end }}
+
+Write-Host "Scoop installation for Windows complete."
