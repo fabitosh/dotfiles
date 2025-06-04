@@ -94,8 +94,6 @@ map <leader>wv <Action>(SplitVertically)
 map <leader>ws <Action>(SplitHorizontally)
 map <leader>wd <Action>(CloseEditor)
 map <leader>wo <Action>(Unsplit)
-map <leader>w] <Action>(MoveEditorToNextTabGroup)
-map <leader>w[ <Action>(MoveEditorToPreviousTabGroup)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
 map <leader>wl <Action>(Switcher)
 
