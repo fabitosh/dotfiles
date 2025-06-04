@@ -128,9 +128,6 @@ map K <Action>(QuickJavaDoc)
 map [ <Action>(MethodUp)
 map ] <Action>(MethodDown)
 
-" Quickfix List
-nmap <leader>xq <Action>(ActivateProblemsViewToolWindow)
-
 " --- Git ---
 map <leader>gg <Action>(Vcs.QuickListPopupAction)
 map <leader>gs <Action>(Vcs.ShowChanges)
@@ -153,6 +150,9 @@ map <leader>rO <Action>(StepOut)
 map <leader>tt <Action>(ActivateTerminalToolWindow)
 " Consider mapping terminal escape sequence if needed, e.g., tnoremap <Esc> <C-\><C-n>
 
+" --- Intelligence / Copilot ---
+map <leader>xc <Action>(copilot.chat.show)
+nmap <leader>xp <Action>(ActivateProblemsViewToolWindow)
 
 " --- View / Display Options ---
 map <leader>vd <Action>(ToggleDistractionFreeMode)
