@@ -29,7 +29,6 @@ nnoremap <SPACE> <Nop>
 " Or install the corresponding JetBrains plugins if available (like EasyMotion, Which-Key)
 
 " Note: Actual installation often happens via IDE Plugin Marketplace for some features
-" Plug 'easymotion/vim-easymotion'        " Already enabled via `set easymotion` if JB plugin installed
 Plug 'tpope/vim-surround'               " cs, ds, ys - change/delete/add surroundings
 Plug 'tpope/vim-commentary'             " gc - comment/uncomment lines
 
@@ -38,7 +37,6 @@ Plug 'tpope/vim-commentary'             " gc - comment/uncomment lines
 " Enable EasyMotion plugin integration (Requires JetBrains EasyMotion plugin)
 set easymotion
 " use (leader, leader) and then any command that takes motion as an argument
-
 
 " nerdtree
 Plug 'preservim/nerdtree'               " File explorer (:NERDTreeToggle)
@@ -56,6 +54,7 @@ let g:highlightedyank_highlight_duration = 200
 " -----------------------------------------------------------------------------
 " Escape insert mode easily
 inoremap jj <Esc>
+inoremap jk <Esc>
 nmap <leader>vim :edit ~/.ideavimrc<CR>
 
 " Easy visual indentation
@@ -78,7 +77,6 @@ vnoremap <leader>s y:%s/<C-r>"/<C-r>"/g<Left><Left>
 
 " --- File / Explorer ---
 map <leader>ff <Action>(GotoFile)
-map <leader>fs <Action>(SaveAll)
 " Grep (Root Dir)
 nmap <leader>/ <Action>(FindInPath)
 
@@ -87,15 +85,23 @@ map <leader>sa <Action>(FindInPath)
 map <leader>sp <Action>(FindInPath)
 map <leader>sw <Action>(FindUsages)
 
+" --- Project ---
+map <leader>wq <Action>(NextProjectWindow)
+
+
+" --- Tab / Buffer Management ---
 map <leader>wv <Action>(SplitVertically)
 map <leader>ws <Action>(SplitHorizontally)
-map <leader>wc <Action>(CloseEditor)
+map <leader>wd <Action>(CloseEditor)
 map <leader>wo <Action>(Unsplit)
 map <leader>w] <Action>(MoveEditorToNextTabGroup)
 map <leader>w[ <Action>(MoveEditorToPreviousTabGroup)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
-" --- Project ---
-map <leader>wq <Action>(NextProjectWindow)
+map <leader>wl <Action>(Switcher)
+
+" Tab Navigation
+nmap <S-h> <Action>(PreviousTab)
+nmap <S-l> <Action>(NextTab)
 
 " Navigate between Vim splits using Ctrl + hjkl (like tmux)
 map <C-h> <C-w>h
@@ -108,18 +114,6 @@ map <C-A-h> <Action>(StretchSplitToLeft)
 map <C-A-l> <Action>(StretchSplitToRight)
 map <C-A-k> <Action>(StretchSplitToTop)
 map <C-A-j> <Action>(StretchSplitToBottom)
-
-" --- Tab / Buffer Management ---
-map <leader>bd <Action>(CloseContent)
-map <leader>bn <Action>(NextTab)
-map <leader>bp <Action>(PreviousTab)
-map <leader>b] <Action>(NextTab)
-map <leader>b[ <Action>(PreviousTab)
-map <leader>bl <Action>(Switcher)
-
-" Tab Navigation
-nmap <S-h> <Action>(PreviousTab)
-nmap <S-l> <Action>(NextTab)
 
 " --- Code Actions ---
 map <leader>ca <Action>(ShowIntentionActions)
@@ -140,7 +134,6 @@ map ] <Action>(MethodDown)
 nmap <leader>xq <Action>(ActivateProblemsViewToolWindow)
 
 " --- Git ---
-" Git actions popup
 map <leader>gg <Action>(Vcs.QuickListPopupAction)
 map <leader>gs <Action>(Vcs.ShowChanges)
 map <leader>gc <Action>(CheckinProject)
@@ -149,7 +142,6 @@ map <leader>gp <Action>(Vcs.Push)
 map <leader>gh <Action>(Vcs.Show.Log)
 
 " --- Run / Debug ---
-" Run
 map <leader>rr <Action>(Run)
 map <leader>rd <Action>(Debug)
 map <leader>rb <Action>(ToggleLineBreakpoint)
