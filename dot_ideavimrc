@@ -13,8 +13,10 @@ set incsearch                  " Highlight search results incrementally
 set hlsearch                   " Highlight all search results
 set ignorecase                 " Case-insensitive search
 set smartcase                  " Override ignorecase if search pattern contains uppercase letters
-set clipboard=unnamed          " Use system clipboard for copy/paste
-set notimeout		       " no timeout for which-key
+set clipboard=unnamed,ideaput  " Use system clipboard for copy/paste, smart paste into IDE
+set notimeout		           " no timeout for which-key
+set ideajoin                   " Smart join on <S-J>
+set ideamarks                  " Sync marks with IDE (only works for capital letters)
 
 " -----------------------------------------------------------------------------
 " Leader Key
