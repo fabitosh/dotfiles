@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "windows" -}}
 Write-Host "Installing Windows packages with Scoop..."
 
 if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
@@ -11,3 +12,4 @@ scoop install {{ . }}
 {{ end }}
 
 Write-Host "Scoop installation for Windows complete."
+{{ end }}
