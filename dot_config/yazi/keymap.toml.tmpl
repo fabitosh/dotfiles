@@ -22,6 +22,12 @@ on = ["g", "f"]
 run = "cd '/mnt/c/Users/fmeier/My Documents'"
 desc = "Go to Windows Documents"
 
+[[manager.prepend_keymap]]
+# Overwrites "Follow hovered symlink"
+on = ["g", "d"]
+run = "cd '/mnt/c/Users/fmeier/Downloads/'"
+desc = "Go to Windows Downloads"
+
 [[manager.append_keymap]]
 on = ["g", "r"]
 run = "cd ~/repos/"
