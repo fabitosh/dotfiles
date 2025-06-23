@@ -1,10 +1,20 @@
 [user]
-    name = "Fabio Meier"
-    email = {{ .email }}
+  name = "Fabio Meier"
+  email = {{ .email }}
+
+[color]
+  ui = auto
+
+[gpg]
+  format = ssh
+
+[commit]
+  gpgsign = true
 
 [core]
-    editor = nvim
-    excludesfile = ~/.config/git/ignore
+  editor = nvim
+  pager = delta
+  excludesfile = ~/.config/git/ignore
 
 [init]
     defaultBranch = main
@@ -12,6 +22,9 @@
 [pull]
     # When you pull, rebase changes on top of the fetched branch.
     rebase = true
+
+[interactive]
+    diffFilter = delta --color-only
 
 [fetch]
     # When fetching, automatically remove remote-tracking branches that no longer exist on the remote.
@@ -24,4 +37,8 @@
 [push]
     # Requires Git 2.37+
     autoSetupRemote = true
+
+[delta]
+  navigate = true
+  side-by-side = true
 
