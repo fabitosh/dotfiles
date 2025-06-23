@@ -1,0 +1,27 @@
+[user]
+    name = "Fabio Meier"
+    email = {{ .email }}
+
+[core]
+    editor = nvim
+    excludesfile = ~/.config/git/ignore
+
+[init]
+    defaultBranch = main
+
+[pull]
+    # When you pull, rebase changes on top of the fetched branch.
+    rebase = true
+
+[fetch]
+    # When fetching, automatically remove remote-tracking branches that no longer exist on the remote.
+    prune = true
+
+[rebase]
+    # Automatically stash any local changes before a rebase and apply them after.
+    autoStash = true
+
+[push]
+    # Requires Git 2.37+
+    autoSetupRemote = true
+

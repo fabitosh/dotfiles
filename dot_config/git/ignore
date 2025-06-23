@@ -1,0 +1,24 @@
+# --- System Files ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# --- Editor & IDE Files ---
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Python ---
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# --- Terraform ---
+.terraform/
+*.tfstate.d/
+*.tfvars
