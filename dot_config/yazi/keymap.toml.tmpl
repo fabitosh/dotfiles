@@ -1,34 +1,34 @@
 {{ if eq .chezmoi.os "darwin" }}
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 # Overwrites "Follow hovered symlink"
 on = ["g", "f"]
 run = "cd '~/Google Drive/My Drive/File Management'"
 desc = "Go to GDrive File Management"
 
-[[manager.append_keymap]]
+[[mgr.append_keymap]]
 on = ["g", "r"]
 run = "cd ~/repos/github/fabitosh/"
 desc = "Go to cloned github repos"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["g", "o"]
 run = "cd '~/Google Drive/My Drive/obsiabio'"
 desc = "Go to obsidian vault"
 
 {{else if eq .chezmoi.os "linux" }}
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 # Overwrites "Follow hovered symlink"
 on = ["g", "f"]
 run = "cd '/mnt/c/Users/fmeier/My Documents'"
 desc = "Go to Windows Documents"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 # Overwrites "Follow hovered symlink"
 on = ["g", "d"]
 run = "cd '/mnt/c/Users/fmeier/Downloads/'"
 desc = "Go to Windows Downloads"
 
-[[manager.append_keymap]]
+[[mgr.append_keymap]]
 on = ["g", "r"]
 run = "cd ~/repos/"
 desc = "Go to cloned github repos"
