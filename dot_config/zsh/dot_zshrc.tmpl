@@ -1,14 +1,3 @@
-{{- if eq .chezmoi.os "linux" -}}
-# Find programs installed by Linuxbrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# take system certificate directory, ant not homebrew openssl@3 one for now.
-export SSL_CERT_DIR=/etc/ssl/certs/
-{{- end }}
-# Load not tracked sensitive data containing env vars
-[ -f $XDG_CONFIG_HOME/secrets_env ] && source $XDG_CONFIG_HOME/secrets_env
-
-# Path to your oh-my-zsh installation.
-export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -50,8 +39,6 @@ fi
 alias brewup="brew update -q && brew upgrade && brew upgrade --cask"
 alias brewupg="brew update -q && brew upgrade -q && brew upgrade --cask --greedy -q"
 {{ else if eq .chezmoi.os "linux" }}
-# sudo apt install openjdk-11-jdk -y
-export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 alias brewup="brew update && brew upgrade"
 {{- end }}
 
@@ -116,17 +103,6 @@ ZVM_CURSOR_STYLE_NORMAL=block
 ZVM_CURSOR_STYLE_INSERT=bar
 ZVM_CURSOR_STYLE_VISUAL=underline
 
-# --- pyenv  ---
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d "$PYENV_ROOT/bin" ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # --- remaining one-line configurations ---
 source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
-
-{{- if eq .chezmoi.os "darwin" }}
-eval "$(direnv hook zsh)"
-export PATH="$PATH:~/.lmstudio/bin"
-{{- end }}
