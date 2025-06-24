@@ -45,7 +45,7 @@ export SSL_CERT_DIR=/etc/ssl/certs/
 export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 
 # --- Mac OS ---
-{{- if eq .chezmoi.os "darwin" }}
+{{- else if eq .chezmoi.os "darwin" }}
 eval "$(direnv hook zsh)"
 export PATH="$PATH:~/.lmstudio/bin"
 {{- end }}
