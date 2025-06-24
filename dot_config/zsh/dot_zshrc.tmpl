@@ -5,7 +5,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export SSL_CERT_DIR=/etc/ssl/certs/
 {{- end }}
 # Load not tracked sensitive data containing env vars
-[ -f $XDG_CONFIG_HOME/secrets_env ] && source XDG_CONFIG_HOME/secrets_env
+[ -f $XDG_CONFIG_HOME/secrets_env ] && source $XDG_CONFIG_HOME/secrets_env
 
 # Path to your oh-my-zsh installation.
 export ZSH="$XDG_DATA_HOME/oh-my-zsh"
