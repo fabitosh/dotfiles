@@ -24,18 +24,16 @@ Don't edit the file directly! chezmoi will not track those changes.
 -`chezmoi apply .crazyconfig`
 -`chezmoi re-add .crazyconfig`
 
-### Diff tool for `chezmoi diff`
-
-```toml
-~/.config/chezmoi/chezmoi.toml
-[diff]
-    command = "delta"
-    pager = "delta"
-```
-
 ## Manual Steps that I think are needed
 
-- homebrew/scoop installation
+- package manager: homebrew/scoop installation
 - ssh key generation and auth on github
 - oh-my-zsh and package installs
+
+### On Linux/Work
+
+- Java installation
+- secrets_env
+- databricks.cfg
+- vpn certificates
 ...
