@@ -24,7 +24,7 @@ Don't edit the file directly! chezmoi will not track those changes.
 -`chezmoi apply .crazyconfig`
 -`chezmoi re-add .crazyconfig`
 
-## Manual Steps that I think are needed
+## Not automated (to automate or just do manually)
 
 - package manager: homebrew/scoop installation
 - ssh key generation and auth on github
@@ -36,4 +36,9 @@ Don't edit the file directly! chezmoi will not track those changes.
 - secrets_env
 - databricks.cfg
 - vpn certificates
+
+### Windows
+
+- [AutoDarkMode](https://github.com/AutoDarkMode/Windows-Auto-Night-Mode) with scoop
+- PowerToys
 ...
