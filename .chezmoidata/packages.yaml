@@ -19,6 +19,7 @@ packages:
       - jq
       - lazygit
       - lsd
+      - mono  # for building .NET projects on mac (unity)
       - neovim
       - pipx
       - pyenv
