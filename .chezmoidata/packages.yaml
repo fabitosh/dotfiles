@@ -10,6 +10,7 @@ packages:
       - fd
       - ffmpeg
       - fzf
+      - gemini-cli
       - gh
       - git
       - git-delta
