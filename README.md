@@ -40,5 +40,6 @@ Don't edit the file directly! chezmoi will not track those changes.
 ### Windows
 
 - [AutoDarkMode](https://github.com/AutoDarkMode/Windows-Auto-Night-Mode) with scoop
-- PowerToys
+- [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/), system integration
+- [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/), system integration
 ...
