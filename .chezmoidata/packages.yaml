@@ -27,6 +27,7 @@ packages:
       - pyenv-virtualenv
       - rga
       - ripgrep
+      - sheldon # toml zsh plugin manager replacing oh-my-zsh
       - the_silver_searcher
       - tlrc
       - uv
@@ -99,6 +100,7 @@ packages:
       - pyenv-virtualenv
       - rga
       - ripgrep
+      - sheldon
       - the_silver_searcher
       - tlrc
       - uv
