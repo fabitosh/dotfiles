@@ -14,11 +14,11 @@ else
 fi
 
 # Source custom aliases and functions
-if [ -f "$ZDOTDIR/.zsh_aliases" ]; then
-  source "$ZDOTDIR/.zsh_aliases"
-fi
 if [ -f "$ZDOTDIR/.zsh_functions" ]; then
     source "$ZDOTDIR/.zsh_functions"
+fi
+if [ -f "$ZDOTDIR/.zsh_aliases" ]; then
+  source "$ZDOTDIR/.zsh_aliases"
 fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
