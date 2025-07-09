@@ -12,8 +12,9 @@ export EDITOR='nvim'
 
 # Point Zsh itself to the config directory
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-# Path to your oh-my-zsh installation.
-export ZSH="$XDG_DATA_HOME/oh-my-zsh"
+
+# --- Sheldon --- 
+export SHELDON_CONFIG_DIR="$XDG_CONFIG_HOME/sheldon"
 
 # --- OS-Specific Homebrew Configuration ---
 {{ if eq .chezmoi.os "darwin" }}
