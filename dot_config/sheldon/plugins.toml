@@ -21,3 +21,7 @@ git = "https://github.com/junegunn/fzf"
 
 [plugins.zoxide]
 git = "https://github.com/ajeetdsouza/zoxide"
+
+[plugins.ssh-agent] # remember ssh key passphrase for session
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/ssh-agent"
