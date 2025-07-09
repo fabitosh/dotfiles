@@ -28,7 +28,6 @@ Don't edit the file directly! chezmoi will not track those changes.
 
 - package manager: homebrew/scoop installation
 - ssh key generation and auth on github
-- oh-my-zsh and package installs
 
 ### On Linux/Work
 
