@@ -26,30 +26,6 @@ if [ -f "$ZDOTDIR/.zsh_aliases" ]; then
   source "$ZDOTDIR/.zsh_aliases"
 fi
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# --- Homebrew ---
-{{- if eq .chezmoi.os "darwin" }}
-alias brewup="brew update -q && brew upgrade && brew upgrade --cask"
-alias brewupg="brew update -q && brew upgrade -q && brew upgrade --cask --greedy -q"
-{{ else if eq .chezmoi.os "linux" }}
-alias brewup="brew update && brew upgrade"
-{{- end }}
-
-# --- Abbreviations ---
-alias vi=nvim
-alias lg=lazygit
-alias pyc=pycharm
-alias zsh='chezmoi edit $XDG_CONFIG_HOME/zsh/.zshrc'
-
-# --- Navigation ---
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-
 # --- Chezmoi without spawning a new shell ---
 chezmoi-cd() {
   cd $(chezmoi source-path)
@@ -64,11 +40,6 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
-# --- lsd - ls deluxe ---
-alias ls="lsd"
-alias l="lsd -l"
-alias la="lsd -Al"
 
 {{- if eq .chezmoi.os "linux" }}
 # --- terraform ---
