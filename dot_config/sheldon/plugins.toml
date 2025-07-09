@@ -16,12 +16,6 @@ git = "https://github.com/zsh-users/zsh-syntax-highlighting"
 [plugins.zsh-vi-mode]
 git = "https://github.com/jeffreytse/zsh-vi-mode"
 
-[plugins.fzf]
-git = "https://github.com/junegunn/fzf"
-
-[plugins.zoxide]
-git = "https://github.com/ajeetdsouza/zoxide"
-
 [plugins.ssh-agent] # remember ssh key passphrase for session
 github = "ohmyzsh/ohmyzsh"
 dir = "plugins/ssh-agent"
