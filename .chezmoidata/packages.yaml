@@ -109,8 +109,14 @@ packages:
       - zsh-vi-mode
   windows:
     scoop:
+      buckets:
+        - name: dorado
+          url: https://github.com/chawyehsu/dorado
+      packages:
       - 7zip
+      - autodarkmode
       - chezmoi
+      - git
       - msklc
       - neovim
       - obsidian

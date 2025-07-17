@@ -6,10 +6,16 @@ if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
   exit 1
 }
 
-{{ range .packages.windows.scoop }}
+# Add buckets before installing packages
+{{- range .packages.windows.scoop.buckets }}
+Write-Host "Adding Scoop bucket '{{ .name }}'..."
+scoop bucket add {{ .name }} {{ .url }}
+{{- end }}
+
+{{- range .packages.windows.scoop.packages }}
 Write-Host "Installing {{ . }} with Scoop..."
 scoop install {{ . }}
-{{ end }}
+{{- end }}
 
 Write-Host "Scoop installation for Windows complete."
 {{ end }}
