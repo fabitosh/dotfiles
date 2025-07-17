@@ -1,3 +1,4 @@
+{{ if ne .chezmoi.os "windows" -}} 
 #!/bin/sh
 # Installs Homebrew if not present, and configures the PATH for this session.
 
@@ -14,3 +15,4 @@ fi
 
 echo "Homebrew installation script finished."
 echo "IMPORTANT: A new shell is required for Homebrew to be in your PATH."
+{{ end -}}
