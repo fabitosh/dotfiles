@@ -1,0 +1,16 @@
+#!/bin/sh
+# Installs Homebrew if not present, and configures the PATH for this session.
+
+set -e
+
+if ! command -v brew >/dev/null 2>&1; then
+  echo "Installing Homebrew..."
+  # Run the official installer. This might prompt for the sudo password.
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+else
+  echo "Homebrew is already installed."
+fi
+
+echo "Homebrew installation script finished."
+echo "IMPORTANT: A new shell is required for Homebrew to be in your PATH."
