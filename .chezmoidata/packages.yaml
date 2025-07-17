@@ -105,7 +105,6 @@ packages:
       - xh
       - yazi
       - zoxide
-      - zsh
       - zsh-vi-mode
   windows:
     scoop:
