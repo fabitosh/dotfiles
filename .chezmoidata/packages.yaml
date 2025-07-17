@@ -117,6 +117,7 @@ packages:
       - 7zip
       - autodarkmode
       - chezmoi
+      - firefox
       - git
       - msklc
       - neovim
