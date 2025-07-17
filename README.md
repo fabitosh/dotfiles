@@ -3,7 +3,8 @@
 Using [chezmoi](https://www.chezmoi.io/quick-start/) to share configuration files across multiple systems.
 
 ## Install
-`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fabitosh`
+- Mac & Linux: `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fabitosh`
+- Windows: [Install chezmoi](https://www.chezmoi.io/install/#__tabbed_4_2). Run `chezmoi init --apply fabitosh`.
 
 ## Maintain
 
@@ -36,14 +37,13 @@ Don't edit the file directly! chezmoi will not track those changes.
 
 ### On Linux/Work
 
+- vpn certificates
 - Java installation
 - secrets_env
 - databricks.cfg
-- vpn certificates
 
 ### Windows
 - Install WSL (Corporate Network Issue Fix: `wsl.exe --update --web-download`)
-- [AutoDarkMode](https://github.com/AutoDarkMode/Windows-Auto-Night-Mode) with scoop
 - [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/), system integration
 - [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/), system integration
 ...
