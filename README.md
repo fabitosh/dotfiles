@@ -2,6 +2,11 @@
 
 Using [chezmoi](https://www.chezmoi.io/quick-start/) to share configuration files across multiple systems.
 
+## Install
+`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fabitosh`
+
+## Maintain
+
 ### Add new dotfile
 
 1. Edit the file
@@ -26,7 +31,7 @@ Don't edit the file directly! chezmoi will not track those changes.
 
 ## Not automated (to automate or just do manually)
 
-- package manager: homebrew/scoop installation
+- package manager: scoop installation (homebrew should work)
 - ssh key generation and auth on github
 
 ### On Linux/Work
@@ -37,7 +42,7 @@ Don't edit the file directly! chezmoi will not track those changes.
 - vpn certificates
 
 ### Windows
-
+- Install WSL (Corporate Network Issue Fix: `wsl.exe --update --web-download`)
 - [AutoDarkMode](https://github.com/AutoDarkMode/Windows-Auto-Night-Mode) with scoop
 - [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/), system integration
 - [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/), system integration
