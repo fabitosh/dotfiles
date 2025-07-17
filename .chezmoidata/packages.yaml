@@ -109,6 +109,8 @@ packages:
   windows:
     scoop:
       buckets:
+        - name: extras
+          url: 
         - name: dorado
           url: https://github.com/chawyehsu/dorado
       packages:
