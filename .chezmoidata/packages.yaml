@@ -74,6 +74,8 @@ packages:
       - whatsapp
       - zed
   linux:
+    taps:
+      - databricks/tap
     brews:
       - bat
       - btop

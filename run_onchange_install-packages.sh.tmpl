@@ -28,6 +28,9 @@ fi
 
 echo "Passing linux brews:"
 brew bundle --file=/dev/stdin <<EOF
+{{- range .packages.linux.taps }}
+tap {{ . | quote }}
+{{ end -}}
 {{- range .packages.linux.brews }}
 brew {{ . | quote }}
 {{ end -}}
