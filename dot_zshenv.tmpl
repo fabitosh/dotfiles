@@ -32,12 +32,6 @@ if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
 fi
 {{ end }}
 
-# --- pyenv #todo: remove after switch to uv? ---
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d "$PYENV_ROOT/bin" ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # --- Linux ---
 {{ if eq .chezmoi.os "linux" }}
 # take system certificate directory, and not homebrew openssl@3 one for now.

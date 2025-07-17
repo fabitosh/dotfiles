@@ -23,8 +23,6 @@ packages:
       - mono  # for building .NET projects on mac (unity)
       - neovim
       - pipx
-      - pyenv
-      - pyenv-virtualenv
       - rga
       - ripgrep
       - sheldon # toml zsh plugin manager replacing oh-my-zsh
@@ -96,8 +94,6 @@ packages:
       - lsd
       - neovim
       - pipx
-      - pyenv
-      - pyenv-virtualenv
       - rga
       - ripgrep
       - sheldon
