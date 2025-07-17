@@ -46,4 +46,5 @@ Don't edit the file directly! chezmoi will not track those changes.
 - Install WSL (Corporate Network Issue Fix: `wsl.exe --update --web-download`)
 - [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/), system integration
 - [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/), system integration
+- Keyboard Layout without Deadletters (assets/..). Load in MKLC. Build DLL and Setup Package. Run setup.exe. Keyboard can be selected.
 ...
