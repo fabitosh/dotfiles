@@ -1,0 +1,18 @@
+{{- if eq .chezmoi.os "windows" -}}
+#!/usr/bin/env pwsh
+
+# Installs JetBrains Mono Nerd Font using winget.
+# winget is idempotent; it won't reinstall if the package is already present.
+$fontPackage = "JetBrains.JetBrainsMono.NerdFont"
+
+Write-Host "Checking for Nerd Font package: $fontPackage"
+
+try {
+    winget install --id $fontPackage --source winget --accept-package-agreements --accept-source-agreements
+    Write-Host "Successfully installed or verified $fontPackage."
+} catch {
+    Write-Error "Failed to install $fontPackage. Please ensure winget is installed and working."
+    exit 1
+}
+
+{{- end -}}
