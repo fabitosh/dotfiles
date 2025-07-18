@@ -14,5 +14,23 @@ else
 fi
 
 echo "Homebrew installation script finished."
-echo "IMPORTANT: A new shell is required for Homebrew to be in your PATH."
+
+# --- Configure PATH for the rest of this chezmoi run ---
+BREW_PATH=""
+if [ -x "/opt/homebrew/bin/brew" ]; then
+  # Apple Silicon Macs
+  BREW_PATH="/opt/homebrew/bin/brew"
+elif [ -x "/usr/local/bin/brew" ]; then
+  # Intel Macs
+  BREW_PATH="/usr/local/bin/brew"
+elif [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+  # Linux
+  BREW_PATH="/home/linuxbrew/.linuxbrew/bin/brew"
+fi
+
+if [ -n "$BREW_PATH" ]; then
+  eval "$($BREW_PATH shellenv)"
+  echo "Homebrew paths have been configured for this session."
+fi
+# subsequent sessions have their paths defined in the .zshenv
 {{ end -}}
