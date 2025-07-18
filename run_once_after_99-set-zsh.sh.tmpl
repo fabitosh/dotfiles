@@ -1,9 +1,9 @@
+{{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
 # This script sets the user's default shell to the one installed by Homebrew.
 
 set -e
 
-{{ if eq .chezmoi.os "linux" -}}
   {{- $zsh_path := "/home/linuxbrew/.linuxbrew/bin/zsh" -}}
 
   # 1. Ensure the zsh binary exists
