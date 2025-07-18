@@ -4,23 +4,23 @@
 
 set -e
 
-  {{- $zsh_path := "/home/linuxbrew/.linuxbrew/bin/zsh" -}}
+{{- $zsh_path := "/home/linuxbrew/.linuxbrew/bin/zsh" -}}
 
-  # 1. Ensure the zsh binary exists
-  if [ ! -f "{{ $zsh_path }}" ]; then
-    echo "Error: Homebrew zsh not found. Skipping shell change."
-    exit 1
-  fi
+# 1. Ensure the zsh binary exists
+if [ ! -f "{{ $zsh_path }}" ]; then
+  echo "Error: Homebrew zsh not found. Skipping shell change."
+  exit 1
+fi
 
-  # 2. Add zsh to /etc/shells to make it a valid login shell
-  if ! grep -Fxq "{{ $zsh_path }}" /etc/shells; then
-    echo "Adding {{ $zsh_path }} to /etc/shells..."
-    echo "{{ $zsh_path }}" | sudo tee -a /etc/shells > /dev/null
-  fi
+# 2. Add zsh to /etc/shells to make it a valid login shell
+if ! grep -Fxq "{{ $zsh_path }}" /etc/shells; then
+  echo "Adding {{ $zsh_path }} to /etc/shells..."
+  echo "{{ $zsh_path }}" | sudo tee -a /etc/shells > /dev/null
+fi
 
-  # 3. Change the shell if needed
-  if [ "$SHELL" != "{{ $zsh_path }}" ]; then
-    echo "Changing default shell to {{ $zsh_path }}..."
-    sudo chsh -s "{{ $zsh_path }}" "{{ .chezmoi.username }}"
-  fi
+# 3. Change the shell if needed
+if [ "$SHELL" != "{{ $zsh_path }}" ]; then
+  echo "Changing default shell to {{ $zsh_path }}..."
+  sudo chsh -s "{{ $zsh_path }}" "{{ .chezmoi.username }}"
+fi
 {{ end -}}
