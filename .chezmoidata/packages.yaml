@@ -82,6 +82,7 @@ packages:
       - chezmoi
       - databricks
       - direnv
+      - dos2unix
       - dust
       - fd
       - fzf
