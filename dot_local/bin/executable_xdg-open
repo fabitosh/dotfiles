@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Custom xdg-open for WSL.
+# Intercepts requests from TUIs and other apps and passes them
+# to the Windows host's default browser.
+#
+cmd.exe /c start "" "$1" &>/dev/null &

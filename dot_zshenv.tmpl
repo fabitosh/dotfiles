@@ -9,6 +9,8 @@ export EDITOR='nvim'
 # Load not tracked sensitive env vars
 [ -f $XDG_CONFIG_HOME/secrets_env ] && source $XDG_CONFIG_HOME/secrets_env
 
+# User Scripts, standalone binaries not requiring sudo
+export PATH="$HOME/.local/bin:$PATH"
 
 # Point Zsh itself to the config directory
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
