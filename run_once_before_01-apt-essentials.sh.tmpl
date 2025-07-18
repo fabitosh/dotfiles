@@ -1,11 +1,28 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
-# --- Install apt packages if apt is available ---
-if command -v apt-get &>/dev/null; then
-  echo "Installing apt packages: build-essential curl"
-  sudo apt-get update
-  sudo apt-get install -y build-essential curl zsh
+
+# Exit if apt-get is not found
+if ! command -v apt-get &>/dev/null; then
+  exit 0
 fi
-# use zsh for the session
-exec zsh
+
+# Define packages to install
+packages="build-essential curl zsh"
+to_install=""
+
+# Check which packages are not installed
+for pkg in $packages; do
+  if ! dpkg -s "$pkg" >/dev/null 2>&1; then
+    to_install="$to_install $pkg"
+  fi
+done
+
+# Install any missing packages
+if [ -n "$to_install" ]; then
+  echo "Installing missing packages:$to_install"
+  sudo apt-get update
+  sudo apt-get install -y $to_install
+else
+  echo "All essential apt packages are already installed."
+fi
 {{ end -}}
