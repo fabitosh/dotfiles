@@ -118,6 +118,7 @@ packages:
       - main/7zip
       - dorado/autodarkmode
       - main/chezmoi
+      - extras/draw.io
       - extras/firefox
       - main/git
       - extras/msklc
