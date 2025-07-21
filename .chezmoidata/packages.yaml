@@ -116,7 +116,7 @@ packages:
           url: https://github.com/chawyehsu/dorado
       packages:
       - main/7zip
-      - dorado/autodarkmode
+      - autodarkmode
       - main/chezmoi
       - extras/draw.io
       - extras/firefox
