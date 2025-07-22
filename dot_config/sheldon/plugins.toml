@@ -7,15 +7,27 @@ shell = "zsh"
 [plugins.powerlevel10k]
 git = "https://github.com/romkatv/powerlevel10k"
 
+# Comprehensive completions for many tools, including git
+[plugins.completions]
+github = "zsh-users/zsh-completions"
+
+# Completion for user-defined aliases
+[plugins.alias-completion]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/compleat"
+
+# Autosuggestions based on history
 [plugins.zsh-autosuggestions]
 git = "https://github.com/zsh-users/zsh-autosuggestions"
 
+# Highlight commands in real-time
 [plugins.zsh-syntax-highlighting]
 git = "https://github.com/zsh-users/zsh-syntax-highlighting"
 
 [plugins.zsh-vi-mode]
 git = "https://github.com/jeffreytse/zsh-vi-mode"
 
-[plugins.ssh-agent] # remember ssh key passphrase for session
+# remember ssh key passphrase for session
+[plugins.ssh-agent] 
 github = "ohmyzsh/ohmyzsh"
 dir = "plugins/ssh-agent"
