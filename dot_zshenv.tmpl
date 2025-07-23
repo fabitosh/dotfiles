@@ -15,15 +15,15 @@ export PATH="$HOME/.local/bin:$PATH"
 # Point Zsh itself to the config directory
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-# --- Sheldon --- 
+# Sheldon
 export SHELDON_CONFIG_DIR="$XDG_CONFIG_HOME/sheldon"
 
-# --- OS-Specific Homebrew Configuration ---
+# Homebrew Configuration
 {{ if eq .chezmoi.os "darwin" }}
-# Silicon Macs
+# Silicon Mac
 if [ -x "/opt/homebrew/bin/brew" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-# Intel Macs
+# Intel Mac
 elif [ -x "/usr/local/bin/brew" ]; then
     eval "$(/usr/local/bin/brew shellenv)"
 fi
@@ -34,14 +34,12 @@ if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
 fi
 {{ end }}
 
-# --- Linux ---
 {{ if eq .chezmoi.os "linux" }}
 # take system certificate directory, and not homebrew openssl@3 one for now.
 export SSL_CERT_DIR=/etc/ssl/certs/
 # sudo apt install openjdk-11-jdk -y
 export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 
-# --- Mac OS ---
 {{- else if eq .chezmoi.os "darwin" }}
 eval "$(direnv hook zsh)"
 export PATH="$PATH:~/.lmstudio/bin"
