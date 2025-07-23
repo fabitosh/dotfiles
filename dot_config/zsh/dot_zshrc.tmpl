@@ -18,6 +18,9 @@ else
   export EDITOR='nvim'
 fi
 
+# zsh completion system initialization
+autoload -U compinit && compinit
+
 # Source custom aliases and functions
 if [ -f "$ZDOTDIR/.zsh_functions" ]; then
     source "$ZDOTDIR/.zsh_functions"
