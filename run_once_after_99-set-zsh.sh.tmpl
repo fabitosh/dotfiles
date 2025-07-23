@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.os "linux" -}}
+{{- if eq .chezmoi.os "linux" -}}
 #!/bin/sh
 # This script sets the user's default shell to the one installed by Homebrew.
 
@@ -15,7 +15,7 @@ fi
 # 2. Add zsh to /etc/shells to make it a valid login shell
 if ! grep -Fxq "{{ $zsh_path }}" /etc/shells; then
   echo "Adding {{ $zsh_path }} to /etc/shells..."
-  echo "{{ $zsh_path }}" | sudo tee -a /etc/shells > /dev/null
+  echo "{{ $zsh_path }}" | sudo tee -a /etc/shells >/dev/null
 fi
 
 # 3. Change the shell if needed
