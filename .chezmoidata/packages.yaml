@@ -120,6 +120,7 @@ packages:
       - main/chezmoi
       - extras/draw.io
       - extras/firefox
+      - extras/foxit-reader
       - main/git
       - extras/msklc
       - main/neovim
