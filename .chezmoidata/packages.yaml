@@ -54,6 +54,7 @@ packages:
       - lm-studio
       - mattermost
       - obsidian
+      - omnidisksweeper  # harddisk occupancy overview
       - philips-hue-sync
       - qlcolorcode
       - qlmarkdown
