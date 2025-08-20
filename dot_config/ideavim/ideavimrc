@@ -57,7 +57,7 @@ let g:highlightedyank_highlight_duration = 200
 " Escape insert mode easily
 inoremap jj <Esc>
 inoremap jk <Esc>
-nmap <leader>vim :edit ~/.ideavimrc<CR>
+nmap <leader>vim :edit ~/.config/ideavim/ideavimrc<CR>
 
 " Easy visual indentation
 vnoremap < <gv
