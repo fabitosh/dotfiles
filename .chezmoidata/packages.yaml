@@ -123,6 +123,7 @@ packages:
       - extras/firefox
       - extras/foxit-reader
       - main/git
+      - extras/licecap  # area capture to gif
       - extras/msklc
       - main/neovim
       - extras/obsidian
