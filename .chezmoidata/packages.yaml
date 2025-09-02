@@ -5,6 +5,7 @@ packages:
       - btop
       - bitwarden-cli
       - chezmoi
+      - cloc  # count and categorize lines of code in project 
       - direnv
       - dust
       - fd
@@ -81,6 +82,7 @@ packages:
       - bat
       - btop
       - chezmoi
+      - cloc
       - databricks
       - direnv
       - dos2unix
