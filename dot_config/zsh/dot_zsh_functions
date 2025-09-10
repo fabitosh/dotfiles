@@ -9,3 +9,25 @@ function git_main_branch() {
   done
   echo main
 }
+
+# Interactive rebase from a commit selected with fzf
+grbi() {
+  local HASH
+  HASH=$(git log --color=always --pretty=oneline --abbrev-commit | fzf --ansi --header "Select a commit to rebase from")
+  if [[ -n "$HASH" ]]; then
+    local COMMIT=$(echo "$HASH" | awk '{print $1}')
+    # Rebase interactively from the parent (^) of the selected commit
+    git rebase --interactive --autostash "${COMMIT}^"
+  fi
+}
+
+# Create a fixup! commit for a commit selected with fzf
+gfixup() {
+  local HASH
+  HASH=$(git log --color=always --pretty=oneline --abbrev-commit | fzf --ansi --header "Select a commit for fixup")
+  if [[ -n "$HASH" ]]; then
+    local COMMIT=$(echo "$HASH" | awk '{print $1}')
+    # Stage changes and create a fixup commit, then show status
+    git commit --fixup="$COMMIT" && git status -sb
+  fi
+}
