@@ -36,6 +36,7 @@ packages:
       - zoxide
       - zsh-vi-mode
     casks:
+      - activitywatch  # auto time-tracking 
       - adobe-creative-cloud
       - betterdisplay
       - betterzip
