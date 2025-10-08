@@ -85,7 +85,7 @@ packages:
       - btop
       - chezmoi
       - cloc
-      - databricks
+      - databricks/tap/databricks
       - direnv
       - dos2unix
       - dust
