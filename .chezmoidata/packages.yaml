@@ -123,6 +123,7 @@ packages:
       packages:
       - main/7zip
       - autodarkmode
+      - extras/azurestorageexplorer
       - main/chezmoi
       - extras/draw.io
       - extras/firefox
