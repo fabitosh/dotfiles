@@ -79,6 +79,7 @@ packages:
   linux:
     taps:
       - databricks/tap
+      - hashicorp/tap
     brews:
       - bat
       - btop
@@ -96,6 +97,7 @@ packages:
       - git-extras
       - git-filter-repo
       - git-lfs
+      - hashicorp/tap/terraform
       - jq
       - lazygit
       - lsd
