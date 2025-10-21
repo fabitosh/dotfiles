@@ -4,7 +4,7 @@
 
 set -e
 
-{{- $zsh_path := "/home/linuxbrew/.linuxbrew/bin/zsh" -}}
+{{ $zsh_path := "/home/linuxbrew/.linuxbrew/bin/zsh" -}}
 
 # 1. Ensure the zsh binary exists
 if [ ! -f "{{ $zsh_path }}" ]; then
