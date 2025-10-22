@@ -2,14 +2,14 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title open_rider_or_pycharm
+# @raycast.title open_ide
 # @raycast.mode silent
 
 # Optional parameters:
 # @raycast.icon 🤖
 
 # Documentation:
-# @raycast.description Opens Rider if it is running and PyCharm otherwise
+# @raycast.description Opens IDE based on priority: Rider > WebStorm > PyCharm. If none are open, opens PyCharm.
 # @raycast.author Fabio Meier
 # @raycast.authorURL https//github.com/fabitosh
 
@@ -17,6 +17,8 @@
 
 if pgrep -f "Rider" >/dev/null; then
   open -a "Rider"
+elif pgrep -f "WebStorm" >/dev/null; then
+  open -a "WebStorm"
 else
   open -a "PyCharm"
 fi
