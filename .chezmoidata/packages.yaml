@@ -27,6 +27,7 @@ packages:
       - rga
       - ripgrep
       - sheldon # toml zsh plugin manager replacing oh-my-zsh
+      - tailscale # Peer-to-Peer VPN
       - the_silver_searcher
       - tlrc
       - uv
