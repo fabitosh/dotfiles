@@ -70,6 +70,7 @@ packages:
       - shottr
       - signal
       - suspicious-package
+      - tailscale-app
       - ticktick
       - ukelele
       - unity-hub
