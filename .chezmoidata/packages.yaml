@@ -46,7 +46,6 @@ packages:
       - firefox
       - font-fira-mono-nerd-font
       - font-jetbrains-mono-nerd-font
-      - font-roboto
       - font-symbols-only-nerd-font
       - ghostty
       - google-chrome
