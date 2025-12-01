@@ -130,6 +130,7 @@ packages:
       - extras/firefox
       - extras/foxit-reader
       - main/git
+      - extras/glazewm  # tiling window manager
       - extras/licecap  # area capture to gif
       - extras/msklc
       - main/neovim
