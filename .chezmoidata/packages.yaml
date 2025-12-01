@@ -136,3 +136,4 @@ packages:
       - main/neovim
       - extras/obsidian
       - extras/windirstat
+      - extras/zebar  # cross-platform taskbars
