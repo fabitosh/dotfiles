@@ -39,6 +39,7 @@ packages:
     casks:
       - activitywatch  # auto time-tracking 
       - adobe-creative-cloud
+      - nikitabobko/tap/aerospace  # window manager
       - betterdisplay
       - betterzip
       - bitwarden
