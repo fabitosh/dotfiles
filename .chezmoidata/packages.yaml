@@ -83,6 +83,7 @@ packages:
       - databricks/tap
       - hashicorp/tap
     brews:
+      - azure-cli
       - bat
       - btop
       - chezmoi
