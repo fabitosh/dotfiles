@@ -2,6 +2,7 @@ packages:
   darwin:
     brews:
       - bat
+      - be
       - btop
       - bitwarden-cli
       - chezmoi
@@ -40,6 +41,7 @@ packages:
       - activitywatch  # auto time-tracking 
       - adobe-creative-cloud
       - nikitabobko/tap/aerospace  # window manager
+      - balenaetcher # flash os images to usb-drive
       - betterdisplay
       - betterzip
       - bitwarden
