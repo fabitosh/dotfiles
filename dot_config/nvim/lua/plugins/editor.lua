@@ -10,6 +10,16 @@ return {
     },
   },
 
+  -- Surround Plagin
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({})
+    end,
+  },
+
   -- change trouble config
   {
     "folke/trouble.nvim",
