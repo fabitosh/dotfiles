@@ -1,33 +1,65 @@
 return {
   { import = "lazyvim.plugins.extras.lang.python" },
-  -- add pyright to lspconfig
+
   {
     "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
     opts = {
-      ---@type lspconfig.options
       servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
+        -- pyright, Microsoft developed established default
+        pyright = { enabled = false },
+
+        -- ty
+        ty = {
+          enabled = true,
+          settings = {
+            ty = {
+              analysis = {
+                -- Look for e.g. databricks_globals.pyi in the project root
+                extraPaths = { "." },
+                indexing = true,
+                typeCheckingMode = "basic",
+                useLibraryCodeForTypes = true,
+              },
+            },
+          },
+        },
+
+        -- basedpyright (The more feature-rich pyright fork)
+        basedpyright = {
+          enabled = false,
+          settings = {
+            basedpyright = {
+              analysis = {
+                extraPaths = { "." },
+                diagnosticMode = "openFilesOnly",
+                typeCheckingMode = "basic",
+              },
+            },
+          },
+        },
+
+        -- ruff (Linter/Formatter)
+        ruff = {
+          enabled = true,
+        },
       },
     },
   },
+
   {
     "linux-cultist/venv-selector.nvim",
     opts = {
       settings = {
         options = {
-          -- Automatically look for .venv in current directory (standard for uv)
           cached_venv_automatic_activation = true,
         },
       },
     },
-    -- Keymap to manually switch if needed
     keys = {
       { "<leader>cv", "<cmd>VenvSelect<cr>", desc = "Select VirtualEnv" },
     },
   },
-  -- add any tools you want to have installed below
+
   {
     "williamboman/mason.nvim",
     opts = {
@@ -35,7 +67,6 @@ return {
         "stylua",
         "shellcheck",
         "shfmt",
-        "flake8",
       },
     },
   },
