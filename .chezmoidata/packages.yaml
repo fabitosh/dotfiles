@@ -2,7 +2,6 @@ packages:
   darwin:
     brews:
       - bat
-      - be
       - btop
       - bitwarden-cli
       - chezmoi
@@ -53,6 +52,7 @@ packages:
       - ghostty
       - google-chrome
       - google-drive
+      - google-gemini  # Gemini Deskotp App
       - jetbrains-toolbox
       - karabiner-elements
       - keymapp
