@@ -52,7 +52,7 @@ packages:
       - ghostty
       - google-chrome
       - google-drive
-      - google-gemini  # Gemini Deskotp App
+      - google-gemini  # Gemini Desktop App
       - jetbrains-toolbox
       - karabiner-elements
       - keymapp
@@ -66,7 +66,6 @@ packages:
       - qlprettypatch
       - qlstephen
       - quicklook-csv
-      - quicklook-json
       - raycast
       - rescuetime
       - shottr
