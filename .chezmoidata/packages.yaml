@@ -44,6 +44,7 @@ packages:
       - betterdisplay
       - betterzip
       - bitwarden
+      - claude  # Desktop App
       - drawio
       - firefox
       - font-fira-mono-nerd-font
