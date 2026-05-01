@@ -59,6 +59,7 @@ packages:
       - keymapp
       - lm-studio
       - mattermost
+      - microsoft-teams
       - obsidian
       - omnidisksweeper  # harddisk occupancy overview
       - philips-hue-sync
