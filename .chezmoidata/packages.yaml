@@ -39,6 +39,7 @@ packages:
     casks:
       - activitywatch  # auto time-tracking 
       - adobe-creative-cloud
+      - android-file-transfer # delete routes from garmin watch
       - nikitabobko/tap/aerospace  # window manager
       - balenaetcher # flash os images to usb-drive
       - betterdisplay
