@@ -50,6 +50,23 @@ Don't edit the file directly! chezmoi will not track those changes.
 1. `chezmoi edit .crazyconfig`
 2. `chezmoi apply`
 
+### Homebrew Cask Removal
+
+Removed packages and casks in the dotfiles repo do not get uninstalled on `chezmoi apply`.
+
+To preview potential uninstall:
+
+```
+chezmoi execute-template '
+{{- range .packages.darwin.brews }}brew "{{ . }}"
+{{ end -}}
+{{- range .packages.darwin.casks }}cask "{{ . }}"
+{{ end -}}
+' | brew bundle cleanup --file=-
+```
+
+To execute them, add the `--force` flag.
+
 ### Badboi still edited the config file directly instead of using `chezmoi edit`
 
 - Discard external edits: `chezmoi apply .crazyconfig`
