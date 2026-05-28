@@ -7,11 +7,10 @@ packages:
       - chezmoi
       - cloc  # count and categorize lines of code in project 
       - direnv
-      - dust
+      - dust # disk usage
       - fd
       - ffmpeg
       - fzf
-      - gemini-cli
       - gh
       - git
       - git-delta
@@ -28,8 +27,7 @@ packages:
       - ripgrep
       - sheldon # toml zsh plugin manager replacing oh-my-zsh
       - tailscale # Peer-to-Peer VPN
-      - the_silver_searcher
-      - tlrc
+      - tlrc # tldr pages
       - uv
       - xh
       - yazi
@@ -42,8 +40,7 @@ packages:
       - android-file-transfer # delete routes from garmin watch
       - nikitabobko/tap/aerospace  # window manager
       - balenaetcher # flash os images to usb-drive
-      - betterdisplay
-      - betterzip
+      - betterdisplay # extended (external) display settings
       - bitwarden
       - claude  # Desktop App
       - drawio
@@ -57,29 +54,21 @@ packages:
       - google-gemini  # Gemini Desktop App
       - jetbrains-toolbox
       - karabiner-elements
-      - keymapp
+      - keymapp # zsa voyager layer view
       - lm-studio
-      - mattermost
       - microsoft-teams
       - obsidian
       - omnidisksweeper  # harddisk occupancy overview
       - philips-hue-sync
-      - qlcolorcode
-      - qlmarkdown
-      - qlprettypatch
-      - qlstephen
-      - quicklook-csv
       - raycast
       - rescuetime
       - shottr
       - signal
-      - suspicious-package
       - tailscale-app
       - ticktick
       - ukelele
       - unity-hub
       - vlc
-      - webpquicklook
       - whatsapp
       - zed
   linux:
@@ -96,7 +85,6 @@ packages:
       - direnv
       - dos2unix
       - dust
-      - fd
       - fzf
       - gh
       - git
@@ -109,11 +97,9 @@ packages:
       - lazygit
       - lsd
       - neovim
-      - pipx
       - rga
       - ripgrep
       - sheldon
-      - the_silver_searcher
       - tlrc
       - uv
       - xh
