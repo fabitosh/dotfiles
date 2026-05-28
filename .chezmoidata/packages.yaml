@@ -71,6 +71,7 @@ packages:
       - vlc
       - whatsapp
       - zed
+      - zotero # organize papers
   linux:
     taps:
       - databricks/tap
