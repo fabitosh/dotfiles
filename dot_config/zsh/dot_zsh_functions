@@ -31,3 +31,8 @@ gfixup() {
     git commit --fixup="$COMMIT" && git status -sb
   fi
 }
+
+# Remove all git worktrees
+gwtra() {
+    git worktree list --porcelain | grep '^worktree ' | cut -d' ' -f2- | xargs -I {} git worktree remove "{}"
+}

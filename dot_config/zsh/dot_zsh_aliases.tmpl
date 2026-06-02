@@ -33,8 +33,7 @@ alias gpf="git push --force-with-lease --force-if-includes"
 
 # worktrees
 alias gwt="git worktree"
-# remove all worktrees
-alias gwtra="git worktree list --porcelain | grep '^worktree ' | cut -d' ' -f2- | xargs -I {} git worktree remove "{}"
+# gwtda / delet all in functions
 
 # --- Homebrew ---
 {{- if eq .chezmoi.os "darwin" }}
