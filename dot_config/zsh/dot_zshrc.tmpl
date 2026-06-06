@@ -21,6 +21,12 @@ fi
 # zsh completion system initialization
 autoload -U compinit && compinit
 
+# Rust terminal completions (rustup + cargo)
+if command -v rustup &>/dev/null; then
+  source <(rustup completions zsh)
+  source <(rustup completions zsh cargo)
+fi
+
 # Source custom aliases and functions
 if [ -f "$ZDOTDIR/.zsh_functions" ]; then
     source "$ZDOTDIR/.zsh_functions"
