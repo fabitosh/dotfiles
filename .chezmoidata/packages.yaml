@@ -25,7 +25,6 @@ packages:
       - pipx
       - rga
       - ripgrep
-      - rustup # not sure, whether I still need it through homebrew
       - sheldon # toml zsh plugin manager replacing oh-my-zsh
       - tailscale # Peer-to-Peer VPN
       - tlrc # tldr pages

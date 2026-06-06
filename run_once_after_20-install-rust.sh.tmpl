@@ -1,0 +1,18 @@
+{{ if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux") -}}
+#!/bin/bash
+set -euo pipefail
+
+export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+
+if command -v rustup &>/dev/null; then
+  echo "rustup already installed, updating..."
+  rustup update
+else
+  echo "Installing Rust via rustup..."
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- \
+    --no-modify-path \
+    --default-toolchain stable \
+    -y
+fi
+{{ end -}}
