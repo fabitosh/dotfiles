@@ -24,6 +24,7 @@ packages:
       - mono  # for building .NET projects on mac (unity)
       - neovim
       - pipx
+      - poppler  # pdf preview in yazi and pdf utilities
       - rga
       - ripgrep
       - sheldon # toml zsh plugin manager replacing oh-my-zsh
@@ -101,6 +102,7 @@ packages:
       - lazygit
       - lsd
       - neovim
+      - poppler  # pdf preview in yazi
       - rga
       - ripgrep
       - sheldon
