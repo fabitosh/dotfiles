@@ -2,7 +2,6 @@ gui:
   authorColors:
     'Fabio Meier': 'magenta'
   nerdFontsVersion: "3"
-
 git:
-  paging:
-    pager: "delta --dark --paging=never"
+  pagers:
+    - pager: "delta --dark --paging=never"
