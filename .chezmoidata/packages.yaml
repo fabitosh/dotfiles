@@ -1,5 +1,6 @@
 packages:
   darwin:
+    taps: []
     brews:
       - bat
       - btop
