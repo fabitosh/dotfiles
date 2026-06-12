@@ -1,5 +1,6 @@
 [mgr]
-sort_by = "natural"
+sort_by = "natural" # natural: alphabetically
 sort_translit = true # Umlaute
-linemode = "mtime"
+linemode = "mtime" # metadata text on the right
 show_hidden = true
+
