@@ -18,6 +18,7 @@ packages:
       - git-extras
       - git-filter-repo
       - git-lfs
+      - glab  # gitlab-cli
       - jq
       - lazygit
       - lsd
