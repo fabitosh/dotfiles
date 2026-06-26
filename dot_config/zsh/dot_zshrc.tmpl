@@ -19,6 +19,7 @@ else
 fi
 
 # zsh completion system initialization
+fpath=(${XDG_DATA_HOME:-$HOME/.local/share}/zsh/completions $fpath)
 autoload -U compinit && compinit
 
 # Rust terminal completions (rustup + cargo)
