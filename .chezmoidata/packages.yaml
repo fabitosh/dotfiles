@@ -20,6 +20,7 @@ packages:
       - git-lfs
       - glab  # gitlab-cli
       - jq
+      - just # save and run project specific commands. make alternative
       - lazygit
       - lsd
       - mono  # for building .NET projects on mac (unity)
