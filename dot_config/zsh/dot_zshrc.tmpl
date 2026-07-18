@@ -50,8 +50,12 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+{{- if eq .chezmoi.os "darwin"}}
 
-{{- if eq .chezmoi.os "linux" }}
+# --- oh-my-pi ---
+eval "$(omp completions zsh)"
+
+{{- else if eq .chezmoi.os "linux" }}
 # --- terraform ---
 alias tf="terraform"
 # Initialize Bash completion compatibility for Zsh
