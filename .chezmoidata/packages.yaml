@@ -19,6 +19,7 @@ packages:
       - git-filter-repo
       - git-lfs
       - glab  # gitlab-cli
+      - graphviz  # graph visualizartion, used by pydeps
       - jq
       - just # save and run project specific commands. make alternative
       - lazygit
