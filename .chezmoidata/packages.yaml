@@ -66,6 +66,7 @@ packages:
       - microsoft-teams
       - obsidian
       - omnidisksweeper  # harddisk occupancy overview
+      - opencode-desktop  # LLM Harness
       - philips-hue-sync
       - raindropio # bookmarks
       - raycast
