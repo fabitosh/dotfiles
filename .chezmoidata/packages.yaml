@@ -39,7 +39,6 @@ packages:
       - yazi
       - yt-dlp
       - zoxide
-      - zsh-vi-mode
     casks:
       - activitywatch  # auto time-tracking 
       - adobe-creative-cloud
@@ -116,7 +115,6 @@ packages:
       - xh
       - yazi
       - zoxide
-      - zsh-vi-mode
   windows:
     scoop:
       buckets:
