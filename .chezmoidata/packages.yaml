@@ -73,6 +73,7 @@ packages:
       - shottr
       - signal
       - tailscale-app
+      - telegram  # messenger app
       - ticktick
       - ukelele
       - unity-hub
