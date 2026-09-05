@@ -26,6 +26,7 @@ packages:
       - lsd
       - mono  # for building .NET projects on mac (unity)
       - neovim
+      - nmap # network scanner
       - can1357/tap/omp # oh-my-pi AI coding harness
       - pipx
       - poppler  # pdf preview in yazi and pdf utilities
