@@ -36,3 +36,12 @@ gfixup() {
 gwtra() {
     git worktree list --porcelain | grep '^worktree ' | cut -d' ' -f2- | xargs -I {} git worktree remove "{}"
 }
+
+# Takes the copied md (from Obsidian Web Clipper) and stores it as a new file in downloads
+clipmd() {
+  local filename="${1:-clip-$(date +%Y%m%d-%H%M%S)}"
+  filename="${filename%.md}.md"
+
+  pbpaste > "$filename"
+  print -P "%F{green}✓%f Saved clipboard to %B$filename%b"
+}
