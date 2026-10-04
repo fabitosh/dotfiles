@@ -22,3 +22,6 @@ venv/
 .terraform/
 *.tfstate.d/
 *.tfvars
+
+# --- Harness ---
+**/.claude/settings.local.json
