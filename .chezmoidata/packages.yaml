@@ -38,6 +38,7 @@ packages:
       - uv
       - xh
       - yazi
+      - ykman  # yubikey
       - yt-dlp
       - zoxide
     casks:
