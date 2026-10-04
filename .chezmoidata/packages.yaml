@@ -9,6 +9,7 @@ packages:
       - cloc  # count and categorize lines of code in project 
       - direnv
       - dust # disk usage
+      - exiftool # raw photo metadata analysis
       - fd
       - ffmpeg
       - fzf
