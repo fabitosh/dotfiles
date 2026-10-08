@@ -54,6 +54,7 @@ alias c=clear
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias aeropicker='aerospace list-windows --all --format "%{window-id} | %{workspace} | %{app-name} | %{window-title}" | fzf --bind "enter:become(aerospace focus --window-id {1})"'
 
 # --- lsd - ls deluxe ---
 alias ls="lsd"
