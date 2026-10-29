@@ -46,6 +46,7 @@ packages:
       - activitywatch  # auto time-tracking 
       - adobe-creative-cloud
       - android-file-transfer # delete routes from garmin watch
+      - antigravity-cli # Goolge Terminal Coding Agent. `agy` for usage 
       - nikitabobko/tap/aerospace  # window manager
       - balenaetcher # flash os images to usb-drive
       - betterdisplay # extended (external) display settings
