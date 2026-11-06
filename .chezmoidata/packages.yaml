@@ -67,6 +67,7 @@ packages:
       - keymapp # zsa voyager layer view
       - lm-studio
       - microsoft-teams
+      - navigator # zsa voyager trackpad compagnion app
       - obsidian
       - omnidisksweeper  # harddisk occupancy overview
       - opencode-desktop  # LLM Harness
